@@ -18,7 +18,7 @@ const ProductCard = ({ product }) => {
       </figure>
 
       <div className="mt-6">
-        <h3 className="text-lg font-bold">{product.name}</h3>
+        <h3 className="text-lg font-bold line-clamp-1">{product.name}</h3>
 
         <p className="my-2 flex gap-5 items-center">
           <span className="flex gap-1 items-center text-[#E46212]">
@@ -40,7 +40,7 @@ const ProductCard = ({ product }) => {
           }
         >
           <span>View Details</span>
-          
+
           <HiArrowLongRight className="transition-transform duration-500 group-hover:translate-x-2" />
         </Button>
       </div>

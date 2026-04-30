@@ -1,1 +1,19 @@
 @import "tailwindcss";
+@import "@heroui/styles";
+
+body {
+  font-family: var(--font-geist);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair-display);
+  color: #1a1a1a;
+}
+
+/* orange: #E46212 */
+/* green: #2D5A4A */

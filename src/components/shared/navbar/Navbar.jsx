@@ -5,6 +5,7 @@ import { IoMenuOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
 import { usePathname } from "next/navigation";
 import { Sun, User } from "lucide-react";
+import { Button } from "@heroui/react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,14 +86,29 @@ const Navbar = () => {
 
           <ul className="hidden items-center gap-4 md:flex">{navLink}</ul>
 
-          <div className="flex gap-2 items-center">
-            <User size={18} />
+          <div className="flex gap-3 items-center">
+            <span className="hidden sm:block">
+              <User size={18} />
+            </span>
 
-            <div className="text-sm">
-              <Link href={"/login"}>Login/</Link>
+            <div className="flex gap-2 text-sm">
+              <Link href={"/login"}>
+                <Button
+                  variant="outline"
+                  className={"h-7 px-2.5 sm:px-4 rounded-xl"}
+                >
+                  Login
+                </Button>
+              </Link>
 
-              <Link href={"/register"} className="text-[#E07A3C] font-medium">
-                Register
+              <Link href={"/register"}>
+                <Button
+                  className={
+                    "h-7 px-2.5 sm:px-4 bg-[#E46212] hover:bg-[#f46811] rounded-xl text-white font-medium"
+                  }
+                >
+                  Register
+                </Button>
               </Link>
             </div>
           </div>

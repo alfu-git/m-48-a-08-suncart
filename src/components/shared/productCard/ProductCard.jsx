@@ -1,8 +1,10 @@
 import { Button } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
+import StarRating from "../starRating/StarRating";
 
 const ProductCard = ({ product }) => {
   return (
@@ -20,29 +22,25 @@ const ProductCard = ({ product }) => {
       <div className="mt-6">
         <h3 className="text-lg font-bold line-clamp-1">{product.name}</h3>
 
-        <p className="my-2 flex gap-5 items-center">
-          <span className="flex gap-1 items-center text-[#E46212]">
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </span>
+        <div className="my-2 flex gap-5 items-center">
+          <StarRating rating={product.rating} />
 
           <span className="block text-[#6E5F5D]">({product.rating})</span>
-        </p>
+        </div>
 
         <span className="text-lg font-semibold">${product.price}</span>
 
-        <Button
-          className={
-            "mt-3 h-11 w-full bg-[#E46212] active:bg-[#d65200] flex gap-4 items-center"
-          }
-        >
-          <span>View Details</span>
+        <Link href={`/product-details/${product.id}`}>
+          <Button
+            className={
+              "mt-3 h-11 w-full bg-[#E46212] active:bg-[#d65200] flex gap-4 items-center"
+            }
+          >
+            <span>View Details</span>
 
-          <HiArrowLongRight className="transition-transform duration-500 group-hover:translate-x-2" />
-        </Button>
+            <HiArrowLongRight className="transition-transform duration-500 group-hover:translate-x-2" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

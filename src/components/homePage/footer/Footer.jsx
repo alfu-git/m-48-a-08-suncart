@@ -6,8 +6,8 @@ import { FiFacebook, FiTwitter } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <section className="mt-20 container mx-auto px-5">
-      <div>
+    <footer className="mt-20 container mx-auto px-5">
+      <section>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2 flex flex-col gap-4">
             <h2 className="text-xl font-semibold flex gap-2 items-center">
@@ -193,8 +193,8 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </footer>
   );
 };
 

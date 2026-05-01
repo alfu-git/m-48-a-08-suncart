@@ -31,7 +31,7 @@
     "rating": 4.7,
     "stock": 8,
     "description": "Retro-inspired Clubmaster sunglasses with premium acetate frame.",
-    "image": "https://images2.ray-ban.com//cdn-record-files-pi/1d3147b3-6d35-46eb-8108-a35801354564/06a95c2b-5871-4d1f-a347-ad33014afe0c/0RB3016__W0366__STD__shad__qt.png?impolicy=RB_Product_clone&width=720&bgc=%23f2f2f2",
+    "image": "https://images.nexusapp.co/assets/fd/85/72/728316613.jpg",
     "category": "Sunglasses",
     "tag": "Top Rated"
   },
@@ -43,7 +43,7 @@
     "rating": 4.9,
     "stock": 15,
     "description": "Spacious waterproof tote bag to carry all your beach essentials.",
-    "image": "https://picnicmakers.com/wp-content/uploads/2025/02/the-beach-bag-4.jpg",
+    "image": "https://www.shopboxhill.com/cdn/shop/files/tupelo-tote_2_1000x1000.png?v=1739379180",
     "category": "Bags",
     "tag": "Trending"
   },
@@ -55,7 +55,7 @@
     "rating": 4.7,
     "stock": 6,
     "description": "Sporty luxury sunglasses with lightweight frame and high-performance lenses, ideal for beach outings and summer adventures.",
-    "image": "https://assets2.sunglasshut.com/cdn-record-files-pi/5b9ded13-de4a-4798-81d1-a8f200d28412/ddb4f694-8d50-4d83-a41f-afaf00fad59a/0PS_01US__DG05S0__P21__shad__qt.png?impolicy=SGH_bgtransparent&width=2048",
+    "image": "https://assets.bigcartel.com/product_images/325644513/1.jpeg?auto=format&fit=max&w=768",
     "category": "Accessories",
     "tag": "Premium Choice"
   },
@@ -79,7 +79,7 @@
     "rating": 4.8,
     "stock": 18,
     "description": "Lightweight, sand-free microfiber towel that dries quickly.",
-    "image": "https://i.ibb.co.com/5xC5FXR9/colorful-beach-towels-stacked-sand.jpg",
+    "image": "https://xcdn.next.co.uk/common/items/default/default/itemimages/3_4Ratio/product/lge/AP4737s2.jpg?im=Resize,width=750",
     "category": "Accessories",
     "tag": "Top Rated"
   },
@@ -145,15 +145,14 @@
   },
   {
     "id": 13,
-    "name": "Beach Tote Bag",
-    "brand": "Victoria's Secret",
-    "price": 89.95,
-    "rating": 4.6,
-    "stock": 9,
-    "description": "Stylish large tote bag ideal for carrying beach essentials.",
-    "image": "https://www.victoriassecret.com/p/1000x1333/png/zz/26/03/26/03/1128555779ES_OM_S.jpg",
-    "category": "Beach Accessories",
-    "tag": "Trending"
+    "name": "Havaianas Top Comfort Sandal",
+    "brand": "Havaianas",
+    "price": 30,
+    "rating": 4.9,
+    "stock": 15,
+    "description": "Premium quality Brazilian beach sandal with soft rubber sole, offering superior comfort and durability for everyday summer wear.",
+    "image": "https://blog.havaianas-store.com/wp-content/uploads/2024/03/nuevas-havaianas-primavera-1.jpg",
+    "category": "Footwear"
   },
   {
     "id": 14,
@@ -175,7 +174,7 @@
     "rating": 4.6,
     "stock": 14,
     "description": "Lightweight floral midi dress perfect for summer outings and vacations.",
-    "image": "https://static.zara.net/assets/public/e5be/481e/ae9b4950aa57/f2352b919546/05029107330-a1/05029107330-a1.jpg?ts=1775639996368&w=1332",
+    "image": "https://i.etsystatic.com/5609612/r/il/536066/7606975246/il_fullxfull.7606975246_62kn.jpg",
     "category": "Summer Outfit",
     "tag": "Trending"
   },

@@ -9,7 +9,7 @@ const PopularProducts = async () => {
   );
 
   return (
-    <section className="py-20 sm:py-30 lg:py-40 bg-linear-to-t from-[#FCFBF8] to-white">
+    <section className="py-20 sm:py-30 bg-linear-to-t from-[#FCFBF8] to-white">
       <div className="container mx-auto px-5">
         <div>
           <div className="mb-15 text-center">

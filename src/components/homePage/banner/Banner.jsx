@@ -3,6 +3,7 @@ import { ArrowRight, Sun } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import BannerImg from "@/assets/banner-img.png";
+import "animate.css";
 
 const Banner = () => {
   return (
@@ -62,7 +63,7 @@ const Banner = () => {
               className="object-cover rounded-xl"
             />
 
-            <div className="absolute -right-4 -top-12 lg:top-auto lg:right-auto lg:-bottom-15 lg:-left-15 bg-white rounded-xl p-2 sm:p-4 shadow-xl hover:scale-105 transition">
+            <div className="absolute -right-4 -top-12 lg:top-auto lg:right-auto lg:-bottom-15 lg:-left-15 bg-white rounded-xl p-2 sm:p-4 shadow-xl hover:scale-105 transition animate__animated animate__pulse animate__infinite">
               <span className="text-xs sm:text-sm font-medium">Up to</span>
 
               <h2 className="lg:mb-1 text-[#E46212] text-2xl sm:text-5xl font-bold">

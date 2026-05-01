@@ -21,6 +21,7 @@ const TopBrands = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5  text-center">
           <Link
             href={"https://www.adidas.com/us"}
+            target="_blank"
             className="p-6 bg-white rounded-xl shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
           >
             <figure className="h-12 flex justify-center items-center">
@@ -38,6 +39,7 @@ const TopBrands = () => {
 
           <Link
             href={"https://www.ray-ban.com/usa"}
+            target="_blank"
             className="p-6 bg-white rounded-xl shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
           >
             <figure className="h-12 flex justify-center items-center">
@@ -55,6 +57,7 @@ const TopBrands = () => {
 
           <Link
             href={"https://sg.louisvuitton.com/eng-sg/homepage"}
+            target="_blank"
             className="p-6 bg-white rounded-xl shadow-sm  transition-all hover:shadow-md hover:-translate-y-1"
           >
             <figure className="h-12 flex justify-center items-center">
@@ -67,6 +70,7 @@ const TopBrands = () => {
 
           <Link
             href={"https://www.neutrogena.com/"}
+            target="_blank"
             className="p-6 bg-white rounded-xl shadow-sm transition-all hover:shadow-md hover:-translate-y-1"
           >
             <figure className="h-12 flex justify-center items-center">

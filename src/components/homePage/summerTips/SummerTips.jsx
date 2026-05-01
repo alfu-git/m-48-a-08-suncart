@@ -3,7 +3,7 @@ import React from "react";
 
 const SummerTips = () => {
   return (
-    <section className="my-20 sm:my-30 lg:my-40 container mx-auto px-5">
+    <section className="my-20 sm:my-30 container mx-auto px-5">
       <div>
         <div className="mb-15 text-center">
           <h2 className="text-3xl font-bold">Summer Care Tips</h2>

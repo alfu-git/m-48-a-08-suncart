@@ -1,15 +1,16 @@
-import { Geist, Playfair_Display } from "next/font/google";
+import { Lora, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import Footer from "@/components/homePage/footer/Footer";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",
   subsets: ["latin"],
 });
 
-const geist = Geist({
-  variable: "--font-geist",
+const lora = Lora({
+  variable: "--font-lora",
   subsets: ["latin"],
 });
 
@@ -22,12 +23,17 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${playfairDisplay.variable} ${geist.variable} h-full antialiased`}
+      className={`${playfairDisplay.variable} ${lora.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main>{children}</main>
         <Footer />
+        <ToastContainer
+          position="top-center"
+          autoClose={3000}
+          transition={Zoom}
+        />
       </body>
     </html>
   );

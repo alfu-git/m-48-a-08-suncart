@@ -36,7 +36,7 @@ const RegisterForm = () => {
     const { data, error } = await authClient.signUp.email({
       name: userData.name,
       email: userData.email,
-      photoUrl: userData.photoUrl,
+      image: userData.image,
       password: userData.password,
     });
 
@@ -119,7 +119,7 @@ const RegisterForm = () => {
             </InputGroup.Prefix>
 
             <InputGroup.Input
-              name="photoUrl"
+              name="image"
               placeholder="Photo url"
               className={"pl-3"}
             />

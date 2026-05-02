@@ -6,11 +6,21 @@ import { RxCross2 } from "react-icons/rx";
 import { usePathname } from "next/navigation";
 import { Sun, User } from "lucide-react";
 import { Button } from "@heroui/react";
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
+
+  const { data: session, isPending } = authClient.useSession();
+  const user = session?.user;
+  console.log(session?.user);
+
+  const handleLogOut = async () => {
+    await authClient.signOut();
+  };
 
   const navLink = (
     <>
@@ -38,17 +48,19 @@ const Navbar = () => {
         </Link>
       </li>
 
-      <li>
-        <Link
-          href={"/my-profile"}
-          className={`
+      {user && (
+        <li>
+          <Link
+            href={"/my-profile"}
+            className={`
         font-semibold text-sm
         ${pathname === "/my-profile" ? "text-[#1A1A1A] font-medium border-b border-[#E07A3C]" : "text-[#776867]"}
           `}
-        >
-          My Profile
-        </Link>
-      </li>
+          >
+            My Profile
+          </Link>
+        </li>
+      )}
     </>
   );
 
@@ -75,43 +87,66 @@ const Navbar = () => {
               )}
             </button>
 
-            <h2 className="text-xl font-semibold flex gap-2 items-center">
-              <span className="p-2 bg-[#E46212] rounded-full text-white">
-                <Sun size={20} strokeWidth={1.75} />
-              </span>
+            <Link href={"/"}>
+              <h2 className="text-xl font-semibold flex gap-2 items-center">
+                <span className="p-2 bg-[#E46212] rounded-full text-white">
+                  <Sun size={20} strokeWidth={1.75} />
+                </span>
 
-              <span>SunCart</span>
-            </h2>
+                <span>SunCart</span>
+              </h2>
+            </Link>
           </div>
 
           <ul className="hidden items-center gap-4 md:flex">{navLink}</ul>
 
-          <div className="flex gap-3 items-center">
-            <span className="hidden sm:block">
-              <User size={18} />
-            </span>
+          {user ? (
+            <div className="flex gap-2 items-center">
+              <Image
+                src={user?.image}
+                alt={user?.name}
+                width={35}
+                height={35}
+                className="rounded-full"
+              />
 
-            <div className="flex gap-2 text-sm">
-              <Link href={"/login"}>
-                <Button
-                  variant="outline"
-                  className={"h-7 px-2.5 sm:px-4 rounded-xl"}
-                >
-                  Login
-                </Button>
-              </Link>
-
-              <Link href={"/register"}>
-                <Button
-                  className={
-                    "h-7 px-2.5 sm:px-4 bg-[#E46212] hover:bg-[#f46811] rounded-xl text-white font-medium"
-                  }
-                >
-                  Register
-                </Button>
-              </Link>
+              <Button
+                onClick={handleLogOut}
+                className={
+                  "h-7 px-2.5 sm:px-4 bg-red-600 text-zinc-100 rounded-xl"
+                }
+              >
+                Logout
+              </Button>
             </div>
-          </div>
+          ) : (
+            <div className="flex gap-3 items-center">
+              <span className="hidden sm:block p-2 hover:bg-[#2D5A4A] hover:rounded-md hover:text-white">
+                <User size={18} />
+              </span>
+
+              <div className="flex gap-2 text-sm">
+                <Link href={"/login"}>
+                  <Button
+                    variant="outline"
+                    className={"h-7 px-2.5 sm:px-4 rounded-xl"}
+                  >
+                    Login
+                  </Button>
+                </Link>
+
+                <Link href={"/register"}>
+                  <Button
+                    className={
+                      "h-7 px-2.5 sm:px-4 bg-[#E46212] hover:bg-[#f46811] rounded-xl text-white font-medium"
+                    }
+                  >
+                    Register
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          )}
         </header>
 
         {isMenuOpen && (

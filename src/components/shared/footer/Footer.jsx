@@ -10,13 +10,15 @@ const Footer = () => {
       <section>
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2 flex flex-col gap-4">
-            <h2 className="text-xl font-semibold flex gap-2 items-center">
-              <span className="p-2 bg-[#E46212] rounded-full text-white">
-                <Sun size={20} strokeWidth={1.75} />
-              </span>
+            <Link href={"/"}>
+              <h2 className="text-xl font-semibold flex gap-2 items-center">
+                <span className="p-2 bg-[#E46212] rounded-full text-white">
+                  <Sun size={20} strokeWidth={1.75} />
+                </span>
 
-              <span>SunCart</span>
-            </h2>
+                <span>SunCart</span>
+              </h2>
+            </Link>
 
             <p className="text-[#6E5F5D] max-w-100">
               Your destination for premium summer essentials. From beach days to

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { IoMenuOutline } from "react-icons/io5";
 import { RxCross2 } from "react-icons/rx";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Sun, User } from "lucide-react";
 import { Button } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
@@ -13,13 +13,14 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const pathname = usePathname();
+  const router = useRouter();
 
   const { data: session, isPending } = authClient.useSession();
   const user = session?.user;
-  console.log(session?.user);
 
   const handleLogOut = async () => {
     await authClient.signOut();
+    router.push("/");
   };
 
   const navLink = (

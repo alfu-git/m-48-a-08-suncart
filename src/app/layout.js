@@ -1,8 +1,8 @@
 import { Lora, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
-import Footer from "@/components/homePage/footer/Footer";
 import { ToastContainer, Zoom } from "react-toastify";
+import Footer from "@/components/shared/footer/Footer";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-playfair-display",

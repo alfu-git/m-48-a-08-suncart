@@ -19,12 +19,11 @@ const RegisterPage = () => {
                 className="object-cover"
               />
 
-              
               <div className="absolute bottom-0 left-0 w-full p-8 bg-linear-to-t from-[#F1EBE0]/90 to-transparent">
                 <h2 className="text-3xl font-bold text-black">
                   Join the SunCart Community
                 </h2>
-                
+
                 <p className="mt-4 text-[#6E5F5D]">
                   Get exclusive access to new arrivals, special offers, and
                   summer inspiration.

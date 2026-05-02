@@ -1,5 +1,7 @@
 import RegisterForm from "@/components/registerPage/registerForm/RegisterForm";
+import Image from "next/image";
 import React from "react";
+import RegisterBanner from "@/assets/register-banner.avif";
 
 const RegisterPage = () => {
   return (
@@ -7,24 +9,27 @@ const RegisterPage = () => {
       <div className="container mx-auto px-5">
         <div className="flex min-h-screen">
           {/* image */}
-          <div className="relative hidden w-full lg:max-w-lg  flex-1 lg:block">
-            <div className="absolute inset-0 bg-linear-to-br from-primary/20 via-accent-soft-hover to-primary/10" />
-            <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage:
-                  "url(https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?w=1600&auto=format&fit=crop&q=80)",
-              }}
-            />
-            <div className="absolute inset-0 bg-linear-to-t from-background/80 via-background/20 to-transparent" />
-            <div className="absolute bottom-12 left-12 right-12">
-              <h2 className="font-serif text-3xl font-bold text-foreground">
-                Join the SunCart Community
-              </h2>
-              <p className="mt-4 text-muted-foreground">
-                Get exclusive access to new arrivals, special offers, and summer
-                inspiration.
-              </p>
+          <div className="relative hidden w-full lg:max-w-lg xl:max-w-xl flex-1 lg:block">
+            <div className="relative w-full h-full min-h-screen">
+              <Image
+                src={RegisterBanner}
+                alt="A beach view with a sunglass"
+                fill
+                sizes="(max-width: 768px) 100vw, 33vw"
+                className="object-cover"
+              />
+
+              
+              <div className="absolute bottom-0 left-0 w-full p-8 bg-linear-to-t from-[#F1EBE0]/90 to-transparent">
+                <h2 className="text-3xl font-bold text-black">
+                  Join the SunCart Community
+                </h2>
+                
+                <p className="mt-4 text-[#6E5F5D]">
+                  Get exclusive access to new arrivals, special offers, and
+                  summer inspiration.
+                </p>
+              </div>
             </div>
           </div>
 

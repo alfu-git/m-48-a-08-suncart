@@ -11,18 +11,14 @@ import {
   TextField,
 } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
-import { Eye, Lock, User } from "lucide-react";
+import { Eye, Lock } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Link from "next/link";
-import { IoIosLink } from "react-icons/io";
 
-const RegisterForm = () => {
+const LoginForm = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const router = useRouter();
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -32,25 +28,20 @@ const RegisterForm = () => {
 
     setLoading(true);
 
-    const { data, error } = await authClient.signUp.email({
-      name: userData.name,
+    const { data, error } = await authClient.signIn.email({
       email: userData.email,
-      photoUrl: userData.photoUrl,
       password: userData.password,
+      callbackURL: "/",
     });
 
     setLoading(false);
 
     if (error) {
-      toast.error(<p className="text-black font-bold">{error.message}</p>);
+      toast.error(<h6 className="font-bold text-black">{error.message}</h6>);
     }
 
     if (data) {
-      toast.success(
-        <h6 className="text-black font-bold">Register Completed</h6>,
-      );
-
-      router.push("/login");
+      toast.success(<h6 className="font-bold text-black">Login Successful</h6>);
     }
   };
 
@@ -60,25 +51,6 @@ const RegisterForm = () => {
   return (
     <div className="pb-12">
       <Form className="space-y-6" onSubmit={onSubmit}>
-        {/* name */}
-        <TextField isRequired type="text">
-          <Label>Full name</Label>
-
-          <InputGroup className={inputGroupClass}>
-            <InputGroup.Prefix>
-              <User className="size-4 text-[#6E5F5D]" />
-            </InputGroup.Prefix>
-
-            <InputGroup.Input
-              name="name"
-              placeholder="Enter your name"
-              className={"pl-3"}
-            />
-          </InputGroup>
-
-          <FieldError />
-        </TextField>
-
         {/* email */}
         <TextField
           isRequired
@@ -101,25 +73,6 @@ const RegisterForm = () => {
             <InputGroup.Input
               name="email"
               placeholder="you@example.com"
-              className={"pl-3"}
-            />
-          </InputGroup>
-
-          <FieldError />
-        </TextField>
-
-        {/* image_url */}
-        <TextField isRequired type="text">
-          <Label>Image URL</Label>
-
-          <InputGroup className={inputGroupClass}>
-            <InputGroup.Prefix>
-              <IoIosLink className="size-4 text-[#6E5F5D]" />
-            </InputGroup.Prefix>
-
-            <InputGroup.Input
-              name="photoUrl"
-              placeholder="Photo url"
               className={"pl-3"}
             />
           </InputGroup>
@@ -186,7 +139,7 @@ const RegisterForm = () => {
           type="submit"
           className={"w-full bg-[#E46212] rounded-xl"}
         >
-          {loading ? "Registering..." : "Register"}
+          {loading ? "Logging in..." : "Log in"}
         </Button>
       </Form>
 
@@ -215,28 +168,17 @@ const RegisterForm = () => {
         </Button>
       </div>
 
-      <p className="my-6 flex gap-1 flex-wrap justify-center text-xs text-center text-[#6E5F5D]">
-        <span>By creating an account, you agree to our</span>
-        <Link href={"/"} className="text-[#E46212] hover:text-[#E46212]/80">
-          Terms of Service
-        </Link>
-        and
-        <Link href={"/"} className="text-[#E46212] hover:text-[#E46212]/80">
-          Privacy Policy
-        </Link>
-      </p>
-
-      <p className="text-center text-sm text-muted-foreground">
-        Already have an account?{" "}
+      <p className="mt-6 text-center text-sm text-muted-foreground">
+        Don&apos;t have an account?{" "}
         <Link
-          href="/login"
+          href="/register"
           className="font-medium text-[#E46212] hover:text-[#E46212]/80"
         >
-          Log in
+          Register
         </Link>
       </p>
     </div>
   );
 };
 
-export default RegisterForm;
+export default LoginForm;

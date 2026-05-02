@@ -8,6 +8,7 @@ import { Sun, User } from "lucide-react";
 import { Button } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
+import Spinner from "../spinner/Spinner";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,7 +102,11 @@ const Navbar = () => {
 
           <ul className="hidden items-center gap-4 md:flex">{navLink}</ul>
 
-          {user ? (
+          {isPending ? (
+            <div className="w-25 flex justify-center">
+              <Spinner size={25} />
+            </div>
+          ) : user ? (
             <div className="flex gap-2 items-center">
               <Image
                 src={user?.image}

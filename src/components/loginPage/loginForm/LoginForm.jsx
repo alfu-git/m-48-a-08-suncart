@@ -15,6 +15,7 @@ import { Eye, Lock } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Link from "next/link";
+import { handleGoogleLogIn } from "@/lib/googleAuth";
 
 const LoginForm = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -155,6 +156,7 @@ const LoginForm = () => {
 
       <div className="flex justify-center">
         <Button
+          onClick={handleGoogleLogIn}
           variant="outline"
           className={
             "px-15 flex gap-4 rounded-lg hover:bg-[#2D5A4A] hover:text-white"

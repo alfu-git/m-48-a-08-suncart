@@ -1,8 +1,11 @@
 import React from "react";
-import SadPng from "@/assets/face.png";
-import Image from "next/image";
 import { Button } from "@heroui/react";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Not available",
+  description: "This page is not available in SunCart site",
+};
 
 const NotFoundPage = () => {
   return (

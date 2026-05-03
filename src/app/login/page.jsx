@@ -3,6 +3,11 @@ import Image from "next/image";
 import React from "react";
 import LoginBanner from "@/assets/login-banner.avif";
 
+export const metadata = {
+  title: "SunCart | Login",
+  description: "SunCart app login page",
+};
+
 const LoginPage = () => {
   return (
     <section className="pt-12 bg-[#FCFBF8]">

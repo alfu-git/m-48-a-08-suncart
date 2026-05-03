@@ -3,6 +3,11 @@ import Image from "next/image";
 import React from "react";
 import RegisterBanner from "@/assets/register-banner.avif";
 
+export const metadata = {
+  title: "SunCart | Register",
+  description: "SunCart user account registering page",
+};
+
 const RegisterPage = () => {
   return (
     <section className="pt-12 bg-[#FCFBF8]">

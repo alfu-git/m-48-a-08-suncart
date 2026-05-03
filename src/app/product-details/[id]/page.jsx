@@ -5,6 +5,22 @@ import { ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
+export const generateMetadata = async ({ params }) => {
+  const { id } = await params;
+  console.log(id);
+
+  const allProducts = await getAllProducts();
+
+  const expectedProduct = allProducts.find(
+    (product) => product.id === Number(id),
+  );
+
+  return {
+    title: `SunCart Product | ${expectedProduct.name}`,
+    description: expectedProduct.description,
+  };
+};
+
 const ProductDetailsPage = async ({ params }) => {
   const { id } = await params;
 

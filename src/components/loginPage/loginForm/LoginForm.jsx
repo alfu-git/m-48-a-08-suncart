@@ -16,10 +16,16 @@ import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { handleGoogleLogIn } from "@/lib/googleAuth";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const LoginForm = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -32,7 +38,7 @@ const LoginForm = () => {
     const { data, error } = await authClient.signIn.email({
       email: userData.email,
       password: userData.password,
-      callbackURL: "/",
+      callbackURL: callbackUrl,
     });
 
     setLoading(false);
@@ -43,6 +49,8 @@ const LoginForm = () => {
 
     if (data) {
       toast.success(<h6 className="font-bold text-black">Login Successful</h6>);
+
+      router.push(callbackUrl);
     }
   };
 
@@ -156,7 +164,7 @@ const LoginForm = () => {
 
       <div className="flex justify-center">
         <Button
-          onClick={handleGoogleLogIn}
+          onClick={() => handleGoogleLogIn(callbackUrl)}
           variant="outline"
           className={
             "px-15 flex gap-4 rounded-lg hover:bg-[#2D5A4A] hover:text-white"

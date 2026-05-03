@@ -2,7 +2,6 @@ import { Button } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { FaStar } from "react-icons/fa";
 import { HiArrowLongRight } from "react-icons/hi2";
 import StarRating from "../starRating/StarRating";
 

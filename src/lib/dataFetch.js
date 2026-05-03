@@ -1,4 +1,4 @@
 export const getAllProducts = async () => {
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://data-hazel-one.vercel.app/data.json");
   return res.json();
 };

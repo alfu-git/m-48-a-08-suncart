@@ -6,7 +6,7 @@ const PopularProducts = async () => {
   const allProducts = await getAllProducts();
   const popularProducts = allProducts.filter(
     (product) => product.tag === "Popular",
-  );
+  )
 
   return (
     <section className="py-20 sm:py-30 bg-linear-to-t from-[#FCFBF8] to-white">

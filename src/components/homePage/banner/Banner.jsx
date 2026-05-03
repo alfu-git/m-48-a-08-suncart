@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import BannerImg from "@/assets/banner-img.png";
 import "animate.css";
+import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -43,14 +44,16 @@ const Banner = () => {
                 </span>
               </Button>
 
-              <Button
-                variant="outline"
-                className={
-                  "rounded-xl shadow-sm hover:bg-[#2D5A4A] hover:text-white"
-                }
-              >
-                Explore Sunglasses
-              </Button>
+              <Link href={"/products"}>
+                <Button
+                  variant="outline"
+                  className={
+                    "rounded-xl shadow-sm hover:bg-[#2D5A4A] hover:text-white"
+                  }
+                >
+                  Explore All Products
+                </Button>
+              </Link>
             </div>
           </div>
 
@@ -60,10 +63,11 @@ const Banner = () => {
               src={BannerImg}
               alt="A man enjoy the beach view"
               fill
+              priority
               className="object-cover rounded-xl"
             />
 
-            <div className="absolute -right-4 -top-12 lg:top-auto lg:right-auto lg:-bottom-15 lg:-left-15 bg-white rounded-xl p-2 sm:p-4 shadow-xl hover:scale-105 transition animate__animated animate__pulse animate__infinite">
+            <div className="absolute -right-4 -top-12 lg:top-auto lg:right-auto lg:-bottom-15 lg:-left-15 bg-white rounded-xl p-2 sm:p-4 shadow-xl animate__animated animate__pulse animate__infinite">
               <span className="text-xs sm:text-sm font-medium">Up to</span>
 
               <h2 className="lg:mb-1 text-[#E46212] text-2xl sm:text-5xl font-bold">

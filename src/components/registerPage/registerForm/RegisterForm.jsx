@@ -113,7 +113,7 @@ const RegisterForm = () => {
         </TextField>
 
         {/* image_url */}
-        <TextField isRequired type="text">
+        <TextField isRequired type="url">
           <Label>Image URL</Label>
 
           <InputGroup className={inputGroupClass}>

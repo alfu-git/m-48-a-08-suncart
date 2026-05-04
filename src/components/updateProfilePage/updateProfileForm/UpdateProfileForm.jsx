@@ -18,9 +18,6 @@ const UpdateProfileForm = () => {
 
   const router = useRouter();
 
-  const { data: session } = authClient.useSession();
-  const user = session?.user;
-
   const handleUpdateProfile = async (e) => {
     e.preventDefault();
 
@@ -58,7 +55,7 @@ const UpdateProfileForm = () => {
 
               <InputGroup.Input
                 name="name"
-                placeholder={user?.name}
+                placeholder="New name"
                 className={"pl-3"}
               />
             </InputGroup>
@@ -67,7 +64,7 @@ const UpdateProfileForm = () => {
           </TextField>
 
           {/* image_url */}
-          <TextField isRequired type="text">
+          <TextField isRequired type="url">
             <Label>Image URL</Label>
 
             <InputGroup className={inputGroupClass}>

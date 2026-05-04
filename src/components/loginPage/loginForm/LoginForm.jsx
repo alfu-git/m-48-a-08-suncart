@@ -49,8 +49,6 @@ const LoginForm = () => {
 
     if (data) {
       toast.success(<h6 className="font-bold text-black">Login Successful</h6>);
-
-      router.push(callbackUrl);
     }
   };
 
@@ -117,7 +115,7 @@ const LoginForm = () => {
             <InputGroup.Input
               name="password"
               type={isVisible ? "text" : "password"}
-              placeholder="Create a password"
+              placeholder="Enter your password"
               className={"pl-3"}
             />
 
@@ -164,7 +162,7 @@ const LoginForm = () => {
 
       <div className="flex justify-center">
         <Button
-          onClick={() => handleGoogleLogIn(callbackUrl)}
+          onClick={async () => handleGoogleLogIn(callbackUrl)}
           variant="outline"
           className={
             "px-15 flex gap-4 rounded-lg hover:bg-[#2D5A4A] hover:text-white"

@@ -11,7 +11,7 @@ import {
   TextField,
 } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Eye, Lock, User } from "lucide-react";
 import { FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -24,6 +24,9 @@ const RegisterForm = () => {
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const callbackUrl = searchParams.get("callbackUrl") || "/";
 
   const onSubmit = async (e) => {
     e.preventDefault();
@@ -51,7 +54,7 @@ const RegisterForm = () => {
         <h6 className="text-black font-bold">Register Completed</h6>,
       );
 
-      router.push("/login");
+      router.push(callbackUrl);
     }
   };
 
@@ -203,7 +206,7 @@ const RegisterForm = () => {
 
       <div className="flex justify-center">
         <Button
-          onClick={handleGoogleLogIn}
+          onClick={async () => handleGoogleLogIn(callbackUrl)}
           variant="outline"
           className={
             "px-15 flex gap-4 rounded-lg hover:bg-[#2D5A4A] hover:text-white"

@@ -9,7 +9,7 @@ export const metadata = {
 const MyProfilePage = () => {
   return (
     <section className="py-20 bg-[#FCFBF8]">
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-5 animate__animated animate__fadeIn">
         <ProfileCard />
       </div>
     </section>

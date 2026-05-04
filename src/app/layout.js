@@ -1,6 +1,7 @@
 import dns from "node:dns/promises";
 dns.setServers(["8.8.8.8", "8.8.4.4"]);
 import { Lora, Playfair_Display } from "next/font/google";
+import "animate.css";
 import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

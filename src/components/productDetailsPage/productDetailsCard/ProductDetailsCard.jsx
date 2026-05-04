@@ -17,7 +17,7 @@ const ProductDetailsCard = ({ expectedProduct }) => {
   } = expectedProduct;
 
   return (
-    <div className="grid gap-8 items-center lg:grid-cols-2 lg:gap-12">
+    <div className="grid gap-8 items-center lg:grid-cols-2 lg:gap-12 animate__animated animate__fadeInDown">
       {/* images */}
       <figure className="relative aspect-square overflow-hidden rounded-2xl">
         <Image

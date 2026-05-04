@@ -16,7 +16,7 @@ const AllProducts = async () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-5 py-15 border-y border-gray-300">
+      <div className="container mx-auto px-5 py-15 border-y border-gray-300 animate__animated animate__fadeIn">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-7">
           {allProducts?.map((product) => (
             <ProductCard key={product.id} product={product} />

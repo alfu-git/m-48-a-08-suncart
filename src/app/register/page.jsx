@@ -11,7 +11,7 @@ export const metadata = {
 const RegisterPage = () => {
   return (
     <section className="pt-12 bg-[#FCFBF8]">
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-5 animate__animated animate__fadeIn">
         <div className="flex min-h-screen">
           {/* image */}
           <div className="relative hidden w-full lg:max-w-lg xl:max-w-xl flex-1 lg:block">

@@ -1,7 +1,6 @@
 import { Button } from "@heroui/react";
 import { ArrowRight, Sun } from "lucide-react";
 import React from "react";
-import "animate.css";
 import Link from "next/link";
 import BannerSlider from "./BannerSlider";
 
@@ -61,7 +60,7 @@ const Banner = () => {
             <div className="relative">
               <BannerSlider />
 
-              <div className="absolute -right-4 -top-12 sm:-top-15 sm:-right-20 lg:top-auto lg:right-auto lg:-bottom-17 lg:-left-18 bg-white rounded-xl p-2 sm:p-4 shadow-xl animate__animated animate__pulse animate__infinite">
+              <div className="absolute -right-4 -top-12 sm:-top-15 sm:-right-20 lg:top-auto lg:right-auto lg:-bottom-17 lg:-left-18 bg-white rounded-xl p-2 sm:p-4 shadow-xl animate__animated animate__heartBeat animate__infinite animate__slow">
                 <span className="text-xs sm:text-sm font-medium">Up to</span>
 
                 <h2 className="lg:mb-1 text-[#E46212] text-2xl sm:text-5xl font-bold">

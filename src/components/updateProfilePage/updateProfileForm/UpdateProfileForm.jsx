@@ -44,7 +44,7 @@ const UpdateProfileForm = () => {
     "bg-[#FCFBF8] rounded-lg overflow-hidden focus-within:border-[#E46212] focus-within:ring-2 focus-within:ring-[#E46212] focus-within:shadow-lg-[#E46212] focus-within:shadow-[0_0_15px_rgba(228,98,18,0.35)] transition-all duration-200";
 
   return (
-    <div>
+    <div className="animate__animated animate__bounceInUp">
       <div className="p-5 bg-[#FCFBF8]/60 backdrop-blur-xl rounded-xl shadow-[0_0px_10px_-2px_#E46212] max-w-xl mx-auto">
         <Form className="space-y-6" onSubmit={handleUpdateProfile}>
           {/* name */}

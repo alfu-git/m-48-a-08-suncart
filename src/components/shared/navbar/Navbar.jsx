@@ -87,7 +87,7 @@ const Navbar = () => {
               )}
             </button>
 
-            <Link href={"/"}>
+            <Link href={"/"} className="animate__animated animate__jackInTheBox">
               <h2 className="text-xl font-semibold flex gap-2 items-center">
                 <span className="p-2 bg-[#E46212] rounded-full text-white">
                   <Sun size={20} strokeWidth={1.75} />

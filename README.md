@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🌞 SunCart
 
-## Getting Started
+📝 SunCart is modern and clean summer eCommerce platform where users can explore and purchase seasonal products like sunglasses, summer outfits, skincare, beach accessories, and more.  
 
-First, run the development server:
+ Users can browse products and view products details after authentication.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🎯 Features
+
+✨ Key features:
+
+- 🔐 Secure Authentication System  
+Users can sign up, log in, and manage sessions securely using BetterAuth.
+- 🔒 Protected Routes  
+Product details pages are accessible only to authenticated users.
+- 👤 User Profile Management  
+Users can update their personal information easily.
+
+---
+
+## 🛠️ Tech Stack
+
+💻 Frontend: 
+
+- Next.Js
+- Tailwind CSS
+-  HeroUI
+
+🔐 Authentication:
+
+- BetterAuth
+
+🗄️ Database:
+
+- MongoDB
+
+---
+
+## 📦 NPM Packages
+
+- animate.css
+- react-toastify
+- react-fast-marquee
+
+---
+
+## 🌍 Demo
+
+🔗 Live Demo: https://m-48-a-08-suncart.vercel.app
+
+---
+
+## ⚙️ Installation & Setup
+
+Follow these steps to run locally:
+
+```
+git clone https://github.com/alfu-git/m-48-a-08-suncart
+cd m-48-a-08-suncart
+npm install
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 👤 Author
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 🙋‍♂️ MD Alfaz
+- 🔗 GitHub: https://github.com/alfu-git
+- 💼 LinkedIn: https://www.linkedin.com/in/md-alfaz-dev7
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⭐ Support
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+If your like this project, don't forget to:  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- ⭐ Star the repository
+- 🍴 Fork it
+- 📢 Share with others
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---

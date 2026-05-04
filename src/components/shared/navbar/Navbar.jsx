@@ -69,9 +69,7 @@ const Navbar = () => {
   return (
     <>
       <div className="bg-[#E46212] py-2 px-4 text-white text-center text-sm font-medium">
-        <span>
-          Free shipping on orders over $75 | Summer Sale: Up to 50% off
-        </span>
+        <p>Free shipping on orders over $125 | Summer Sale: Up to 50% off</p>
       </div>
 
       <nav className="sticky top-0 z-40 w-full bg-[#FCFBF8]/60 backdrop-blur-lg">
